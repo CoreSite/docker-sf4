@@ -48,8 +48,8 @@ RUN set -x && curl -sS https://getcomposer.org/installer | php \
     && mv composer.phar /usr/local/bin/composer
 
 # prepare permissions
-RUN usermod -u 1001 www-data
-RUN groupmod -g 1001 www-data
+RUN usermod -u 33 www-data
+RUN groupmod -g 33 www-data
 RUN chsh -s /bin/bash www-data
 RUN chown -R www-data:www-data /var/www
 
